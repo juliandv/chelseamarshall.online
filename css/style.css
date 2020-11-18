@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+	width: 100%;
+	font-size: 16px;
+}
+
+/*HEADER START*/
+header {
+	padding: 15px;
+	margin-bottom: 30px;
+	background: red;
+	height: 60px;
+}
+
+.header-nav-toggle {
+	color: #000;
+}
+
+.header-title {
+	font-size: 13px;
+}
+#header-accordian-content {
+	display: none;
+	position: relative;
+	z-index: 100;
+}
+.header-nav a {
+	background: lightBlue;
+	display: block;
+	width: 100%;
+	padding: 15px 15px;
+}
+/*HEADER END*/
+
+
+main {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.portfolio-items-grid {
+	display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 15px;
+	grid-row-gap: 15px;
+}
+
+.grid-item {
+	display: block;
+	background-color: red;
+	width: 100%;
+	padding-top: 75%; /* 1:1 Aspect Ratio */
+	position: relative; /* If you want text inside of it */
+}
+
+/* If you want text inside of the container */
+.grid-item-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 5vw;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+/*DESKTOP*/
+@media only screen and (min-width: 750px) {
+  body {
+    background-color: blue;
+  }
+	.portfolio-items-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.grid-item-inner {
+		font-size: 2.5vw;
+	}
+}
